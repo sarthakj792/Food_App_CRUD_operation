@@ -1,0 +1,40 @@
+{% extends 'food/base1.html' %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 form-container">
+            <h2 class="text-center">Edit Item</h2>
+<form  method="POST" action = "{% url 'update' item.id %}" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label for="id_name" class="form-label">Name</label>
+        {{ form.name }}
+    </div>
+
+    <div class="mb-3">
+        <label for="id_description" class="form-label">Description</label>
+        {{ form.description }}
+    </div>
+    <div class="mb-3">
+        <label for="id_price" class="form-label">Price</label>
+        {{ form.price }}
+    </div>
+
+    <div class="mb-3">
+        <label for="id_propic" class="form-label">Image URL</label>
+        {{ form.propic }}
+    </div>
+    <button type ="submit">Save</button>
+</form>
+
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

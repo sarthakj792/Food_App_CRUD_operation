@@ -1,0 +1,41 @@
+{% extends 'food/base1.html' %}
+
+
+{% block body %}
+
+
+
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'food/style.css'  %}">
+
+
+<main class="container mt-4">
+    <div id="itemList" class="row"> 
+        {% for item in names %}
+            <div class="col-md-4 mb-4">
+                <div class='card'>
+                    <img src='{{ item.propic.url }}' class='card-img-top' alt='{{ item.name }}'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>{{ item.name }}</h5>
+                        
+                        <p><strong>Price$: {{ item.price }}</strong></p>
+                        
+                        <a href="{% url 'edit' item.id %}"><button class = "btn btn-warning">UPDATE</button></a>
+                        
+                       <a href="{% url 'delete' item.id %}"> <button class="btn btn-danger">DELETE</button></a>
+                       
+
+                    </div> 
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+
+
+
+
+
+{% endblock %}
+

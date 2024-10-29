@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #000; /* Dark black */
+  }
+  
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: white; /* White text color */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ddd; /* Optional: Lighten link color on hover */
+  }

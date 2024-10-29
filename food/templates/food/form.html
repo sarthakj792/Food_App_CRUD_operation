@@ -1,0 +1,29 @@
+{% extends 'food/base2.html' %}
+{% block body %}
+<h1>CREATE</h1>
+<form  method = "post" enctype="multipart/form-data" action = "{% url 'accept'%}">
+
+{% csrf_token %}
+
+<b><label for="name">Name:</label></b>
+{{form.name}}
+<br>
+
+<b><label for="description">Description:</label></b>
+{{form.description}}
+<br>
+
+<b><label   
+    for="price">Price:</label></b>
+       {{form.price}}
+   <br>
+   
+<b><label for="image">Image:</label></b>
+   {{form.propic}}
+<br>
+
+
+<input type="submit"></input>
+
+</form>
+{% endblock %}

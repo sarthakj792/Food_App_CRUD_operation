@@ -1,0 +1,25 @@
+.card {
+    width: 300px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    overflow: hidden; /* Hide overflow content */;
+  } 
+  
+  .card-img-top {
+    width: 100%; /* Make the image take full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center; /* Center text in card body */
+  }
+  
+  .d-flex {
+    display: flex;
+    align-items: stretch; /* Ensure all cards are the same height */
+  }
+  
+  body {
+    background-color: #2f2f2f;
+  }
+  
